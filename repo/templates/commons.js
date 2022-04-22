@@ -20,10 +20,10 @@ const getPageTempl = (title, main) => {
 </html>`;
 };
 
-const getNavItem = (item) => {
+const getNavItem = (navItem) => {
   return `
 <li class="nav-item">
-  <a class="nav-link active" href="${item.getPath()}">${item.getTitle()}</a>
+  <a class="nav-link active" href="${navItem.getPath()}">${navItem.getTitle()}</a>
 </li>  
   `;
 };
