@@ -1,4 +1,4 @@
-function renderPageHome(id, home) {
+function renderPageHome(ref, home) {
   const tmp = `<div>
   <h3>${home.title}</h3>
   <h5>${home.subtitle}</h5>

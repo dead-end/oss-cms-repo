@@ -1,7 +1,7 @@
-function renderComponentBlog(id, blog) {
-  const nav = ctx.getNavByRef(id);
+function renderComponentBlog(ref, blog) {
+  const nav = ctx.getNavByRef(ref);
 
-  print(id);
+  print(ref);
   return `
 <div class="col">
   <div class="card">

@@ -1,4 +1,4 @@
-function renderPageBlogs(id, blogs) {
+function renderPageBlogs(ref, blogs) {
   const getBlogs = () => {
     const arr = [];
     for (const blog of blogs.refs) {

@@ -21,9 +21,10 @@ const getPageTempl = (title, main) => {
 };
 
 const getNavItem = (navItem) => {
+  const url = ctx.getContextPath() + '/' + navItem.getPath();
   return `
 <li class="nav-item">
-  <a class="nav-link active" href="${navItem.getPath()}">${navItem.getTitle()}</a>
+  <a class="nav-link active" href="${url}">${navItem.getTitle()}</a>
 </li>  
   `;
 };

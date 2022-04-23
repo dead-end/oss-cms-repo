@@ -1,4 +1,4 @@
-function renderPageAbout(id, about) {
+function renderPageAbout(ref, about) {
   const main = `
 <h3>${about.title}</h5>
 <h5>${about.title}</h5>

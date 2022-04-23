@@ -1,4 +1,4 @@
-function renderPageBlog(id, blog) {
+function renderPageBlog(ref, blog) {
   const tmp = `
 <section class="text-center m-5">
   <h3>${blog.title}</h3>
