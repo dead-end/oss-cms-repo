@@ -17,5 +17,5 @@ function renderPageBlogs(ref, blogs) {
 </div>
   `;
 
-  return getPageTempl(blogs.title, main);
+  return getPageTempl(ref, blogs.title, main);
 }

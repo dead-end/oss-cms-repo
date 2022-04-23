@@ -7,5 +7,5 @@ function renderPageBlog(ref, blog) {
 </section>
 `;
 
-  return getPageTempl(blog.title, tmp);
+  return getPageTempl(ref, blog.title, tmp);
 }

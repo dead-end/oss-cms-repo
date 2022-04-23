@@ -7,5 +7,5 @@ function renderPageAbout(ref, about) {
 <p>${about.text3}</p>
 `;
 
-  return getPageTempl(about.title, main);
+  return getPageTempl(ref, about.title, main);
 }

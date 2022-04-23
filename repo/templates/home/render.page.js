@@ -6,5 +6,5 @@ function renderPageHome(ref, home) {
   <p>${home.text}</p>
 </div>`;
 
-  return getPageTempl(home.title, tmp);
+  return getPageTempl(ref, home.title, tmp);
 }

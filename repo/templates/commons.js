@@ -1,4 +1,4 @@
-const getPageTempl = (title, main) => {
+const getPageTempl = (ref, title, main) => {
   return `<!doctype html>
 <html lang="en">
   <head>
@@ -8,7 +8,7 @@ const getPageTempl = (title, main) => {
     <title>${title}</title>
   </head>
   <body class="container">
-    ${getNavigation()}
+    ${getNavigation(ref)}
     <main>
       ${main}
     </main>
@@ -20,20 +20,21 @@ const getPageTempl = (title, main) => {
 </html>`;
 };
 
-const getNavItem = (navItem) => {
+const getNavItem = (ref, navItem) => {
   const url = ctx.getContextPath() + '/' + navItem.getPath();
+  const active = ctx.isDescendant(navItem, ref) ? 'active' : '';
   return `
 <li class="nav-item">
-  <a class="nav-link active" href="${url}">${navItem.getTitle()}</a>
+  <a class="nav-link ${active}" href="${url}">${navItem.getTitle()}</a>
 </li>  
   `;
 };
 
-const getNavigation = () => {
+const getNavigation = (ref) => {
   const root = ctx.getNavRoot();
   const result = [];
-  result.push(getNavItem(root));
-  root.getChildren().forEach((i) => result.push(getNavItem(i)));
+  result.push(getNavItem(ref, root));
+  root.getChildren().forEach((i) => result.push(getNavItem(ref, i)));
 
   return `
 <nav class="navbar navbar-expand navbar-light bg-light">
